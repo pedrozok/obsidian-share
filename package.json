@@ -1,0 +1,26 @@
+{
+  "name": "obsidian-share",
+  "version": "1.0.0",
+  "description": "Allows to share notes via a web server",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production && cp manifest.json dist && cp src/styles.css dist",
+    "version": "node version-bump.mjs && git add manifest.json versions.json"
+  },
+  "keywords": [],
+  "author": "Pedo Landeiroto",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@typescript-eslint/eslint-plugin": "^7.10.0",
+    "@typescript-eslint/parser": "^7.10.0",
+    "builtin-modules": "^4.0.0",
+    "esbuild": "^0.21.4",
+    "eslint": "^9.3.0",
+    "obsidian": "latest",
+    "prettier": "^3.2.5",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5"
+  }
+}
